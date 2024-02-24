@@ -1,7 +1,14 @@
-
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 .center {
   margin: auto;
-  width: 50%;
+  width: auto;
   border: 3px solid grey;
   padding: 10px;
 }
@@ -18,9 +25,13 @@ h4 {
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.row{
+    display:flex;
+    gap: 15px
+}
 button {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 10px
 }
 
 input {
