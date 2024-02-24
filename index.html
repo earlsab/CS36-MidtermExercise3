@@ -4,64 +4,16 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
     <body>
-        <div>
+        <div class="center">
             <p>Radius of a Circle</p>
             <input id="radius" type="number"></input>
             <button onclick="functionTest()">Compute</button>
             <div id="results"></div>
         </div>
     </body>
-    <script>
-        const PI = 3.141592653589793238462643;
-        function functionTest() {
-            var rad;
-            rad = document.getElementById("radius").value;
-            dia = calculateDiameter(rad);
-            area = calculateArea(rad);
-            cir = calculateCircumference(rad);
-
-            if (rad > 0)
-            {
-                document.getElementById("results").innerHTML = `
-                <div>   
-                <h1>Results</h1>
-                Diameter:
-                <p id="dia"></p>
-                Area: 
-                <p id="area"></p>
-                <p>Circumference</p>
-                <p id="cir"></p>
-                </div>
-                `
-                document.getElementById("dia").innerHTML = dia;
-                document.getElementById("area").innerHTML = area;
-                document.getElementById("cir").innerHTML = cir;
-            } else if (rad < 0) {
-                document.getElementById("results").innerHTML = `
-                <div>   
-                <h1>ERROR: Radius cannot be a negative number.</h1>
-                </div>
-                `
-            } else {
-                document.getElementById("results").innerHTML = `
-                <div>   
-                <h1>ERROR: Value is required.</h1>
-                </div>
-                `
-            }
-        }
-
-        function calculateDiameter(rad) {
-            return rad * 2;
-        }
-        function calculateArea(rad) {
-            return PI * rad * rad;
-        }
-        function calculateCircumference(rad) {
-            return 2 * PI * rad;
-        }
-
-    </script>
+    <script src="script.js"></script>
 </html>
